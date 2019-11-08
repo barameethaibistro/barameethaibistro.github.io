@@ -1,0 +1,240 @@
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+
+import Thumbnail from '../components/thumbnail'
+import DesktopNews from './desktopNews'
+
+class DesktopHome extends Component {
+  state = { dinnerMenuVisible: false, lunchMenuVisible: false }
+
+  showDinnerDrawer = () => {
+    this.setState({
+      dinnerMenuVisible: true
+    })
+  }
+  onDinnerDrawerClose = () => {
+    this.setState({
+      dinnerMenuVisible: false
+    })
+  }
+
+  showLunchDrawer = () => {
+    this.setState({
+      lunchMenuVisible: true
+    })
+  }
+
+  onLunchDrawerClose = () => {
+    this.setState({
+      lunchMenuVisible: false
+    })
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <div className="intro-gallery">
+          <Thumbnail
+            className="images"
+            imagePath="https://i.imgur.com/lL6qo8n.jpg"
+            imageAlt="Best Thai restaurant in Kansas City - Wall Paintingå"
+            isPortrait={false}
+          />
+          <Thumbnail
+            className="images"
+            imagePath="https://i.imgur.com/xLYTGIll.jpg"
+            imageAlt="Best Thai restaurant in Kansas City - Northeastern Thai"
+            isPortrait={false}
+          />
+          <Thumbnail
+            className="images"
+            imagePath="https://s3-media2.fl.yelpcdn.com/bphoto/FGHH7p9ZL40ogeMl0vPJbA/o.jpg"
+            imageAlt="Best Thai restaurant in Kansas City - Pad Ka Prao"
+            isPortrait={false}
+          />
+          <Thumbnail
+            className="images"
+            imagePath="https://s3-media3.fl.yelpcdn.com/bphoto/SoGFl9P4E-_urs0iRShUJw/o.jpg"
+            imageAlt="Seating Indoor"
+            isPortrait={false}
+          />
+          <Thumbnail
+            className="images"
+            imagePath="https://s3-media2.fl.yelpcdn.com/bphoto/nYrLq2A6VNlWHPWOglnqig/o.jpg"
+            imageAlt="Best Thai restaurant in Kansas City - Baramee Thai Platters"
+            isPortrait={false}
+          />
+          <Thumbnail
+            className="images"
+            imagePath="https://s3-media2.fl.yelpcdn.com/bphoto/Rw5tUfUDPfl0M4uouSZjBw/o.jpg"
+            imageAlt="Best Thai restaurant in Kansas City - Pad Thai"
+            isPortrait={true}
+          />
+          <Thumbnail
+            className="images"
+            imagePath="https://i.imgur.com/IoLSNAyl.jpg"
+            imageAlt="Seating Outdoor: Kitchen Crew"
+            isPortrait={false}
+          />
+          <Thumbnail
+            className="images"
+            imagePath="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/57331473_433008480799948_266372282560020480_n.jpg?_nc_cat=106&_nc_oc=AQlWzZ9pKl0K4FwyJ2maBgwKkUY7Tzxn8ewJSiJ4zlXZGqQgI1q_uGI6dmsZqZSeG9hN0lS9yUcgHFpe6RY8MPIt&_nc_ht=scontent-dfw5-1.xx&oh=a4814497c2d1b75b4921c454216406bd&oe=5DC4B712"
+            imageAlt="Seating Outdoor: Red Umbrella"
+            isPortrait={true}
+          />
+          <Thumbnail
+            className="images"
+            imagePath="https://s3-media1.fl.yelpcdn.com/bphoto/YiX9_BAtBmSUV9iFYfZRyw/o.jpg"
+            imageAlt="Best Thai restaurant in Kansas City - Red Curries"
+            isPortrait={false}
+          />
+
+          <Thumbnail
+            className="images"
+            imagePath="https://i.imgur.com/qw2szPHl.jpg"
+            imageAlt="Best Thai restaurant in Kansas City - Satey"
+            isPortrait={false}
+          />
+          <Thumbnail
+            className="images"
+            imagePath="https://i.imgur.com/WL2blEul.jpg"
+            imageAlt="Best Thai restaurant in Kansas City - Interior"
+            isPortrait={false}
+          />
+          <Thumbnail
+            className="images"
+            imagePath="https://i.imgur.com/lGZgLXfl.jpg"
+            imageAlt="Best Thai restaurant in Kansas City - Sticky Rice Mango"
+            isPortrait={false}
+          />
+        </div>
+        <div className="desktop-narrative">
+          <h1 className="underline-60">Baramee Thai Bistro</h1>
+          <p>
+            Since opening in January 2019 ‘Baramee’ - meaning fulfilling
+            yourself by making others happy in ‘Thai’ language, a Thai native
+            and chef-owner, Nutnisa Hoffman and her partner, co-owner, Doug
+            Hoffman, offers a taste of Northeastern Thai dishes and from-the-wok
+            Thai-style cooking with the freshest produce from the City Market
+            and locally grown ingredients alongside vegetarian options in the
+            Kansas City's Crossroads Arts district.
+          </p>
+          <div className="flex-wrapper">
+            <div className="flex-row">
+              <div className="flex-col">
+                <Link to="/menu/lunch" className="heading-title underline-60">
+                  Our Lunch Menu
+                </Link>
+              </div>
+              <div className="flex-col">
+                <Link to="/menu/dinner" className="heading-title underline-60">
+                  Our Dinner Menu
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="desktop-about-chef">
+          <div className="flex-row-about-chef">
+            <div className="flex-col">
+              <img
+                className="chef-picture"
+                src="https://i.imgur.com/wGBMQgN.jpg"
+                alt="Chef Nutnisa Hoffman"
+              ></img>
+            </div>
+            <div className="flex-col">
+              <p className="chef-quote">
+                “I want to share our Thai food, share our Thai culture, meet new
+                people, and be proud to represent Thai food in America.”
+              </p>
+              <br />
+              <p className="chef-title">
+                <span className="chef-name">Nutnisa Hoffman</span>, the owner of
+                Mali Thai Bistro in Lee’s Summit and Baramee Thai Bistro in the
+                Crossroads
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="desktop-in-the-news">
+          <h1 className="underline-60">In the News</h1>
+          <div className="news-list ">
+            <div className="news-card">
+              <DesktopNews
+                logoPath="https://i.imgur.com/3r5URxY.png"
+                urlPath="https://www.inkansascity.com/eat-drink/news/baramee-thai-bistro-is-spicing-up-the-crossroads/"
+                title="Three Chefs Bring Their Native Country’s Cuisine to KC"
+                press="In Kansas City"
+                author="Kelsey Cipolla"
+                date="Oct 7, 2019"
+                introduction="Every meal tells a story. For these three women, the dishes they prepare for Kansas City at their restaurants tell stories of their childhoods, cultures, and careers. Cooking Thai food is a way to build community for Nutnisa Hoffman, the owner of Mali Thai Bistro in Lee’s Summit and Baramee Thai Bistro in the Crossroads.Staying true to Thai flavors was important for Hoffman, who comes from a region where spice is key. Although the menu includes an assortment of curries and stir-fried dishes, the Thai noodle soup, made with rice noodles and veggies in a savory broth, is among her favorites."
+                featurePicturePath="https://www.inkansascity.com/wp-content/uploads/2019/09/cuisine_feature-680x400.jpg"
+              />
+              <DesktopNews
+                logoPath="https://i.imgur.com/gC7maYt.jpg"
+                urlPath="https://www.inkansascity.com/eat-drink/news/baramee-thai-bistro-is-spicing-up-the-crossroads/"
+                title="The Crossroads: 7 of our favorite restaurants"
+                press="435 Kansas City's Magazine"
+                author="Natalie Gallagher"
+                date="May 31, 2019"
+                introduction="If you’re looking for a cure — to your cold, allergies, hangover or ennui — go for the tom kha soup ($6.95–$18.95) at Baramee Thai Bistro. When you taste the coconut broth infused with lemongrass, kaffir leaves, fresh chili and galangal (a citrusy root similar to ginger), you are tasting joy. And the flavor explosion doesn’t stop there. This menu is packed with plenty of the Thai classics you’re used to (plus a few that might surprise you), and we’re happy to report that, should you be craving a spicy seafood pad Thai ($18.95) with a side of crispy spring rolls ($6.95), Baramee will satisfy."
+                featurePicturePath="https://i.imgur.com/F0wW86F.jpg"
+              />
+              <DesktopNews
+                logoPath="https://i.imgur.com/dqWFlFQ.png"
+                urlPath="http://bit.ly/2NNbDtb"
+                title="Baramee Thai Bistro Brings Northeastern Thai Cuisine to the
+      Crossroads"
+                press="Feast Magazine"
+                author="April Fleming"
+                date="Mar 13, 2019"
+                introduction="Tucked in at the corner of 18th and Baltimore Streets, Douglas and
+      Nutnisa Hoffman’s new restaurant, Baramee Thai Bistro, has been
+      earning steady accolades since it opened in late January. It’s
+      easy to understand why: from its high-level service and serene
+      environment, to of course, the food, Baramee has a lot to offer
+      its customers."
+                featurePicturePath="https://i.imgur.com/xLYTGIl.jpg"
+              />
+              <DesktopNews
+                logoPath="https://i.imgur.com/3r5URxY.png"
+                urlPath="https://www.inkansascity.com/eat-drink/news/baramee-thai-bistro-is-spicing-up-the-crossroads/"
+                title="Baramee Thai Bistro is Spicing Up the Crossroads"
+                press="In Kansas City"
+                author="Kelsey Cipolla"
+                date="Mar 1, 2019"
+                introduction="Baramee Thai Bistro is ready to spice up the Crossroads. A sister location to Lee’s Summit’s popular Mali Thai Bistro, the new restaurant from chef Nutnisa Hoffman and her husband and business partner, Doug, opened in the former Pizzabella space (1810 Baltimore Ave.). Diners can find the chef’s traditional family recipes on display at the location, including her signature Tiger Cry Beef—thinly sliced grilled sirloin topped with potent homemade spicy chili sauce—and Pad Thai."
+                featurePicturePath="https://www.inkansascity.com/wp-content/uploads/2019/02/CN_Baramee-Thai-Bistro-3.jpg"
+              />
+              <DesktopNews
+                logoPath="https://i.imgur.com/6pRWM9f.jpg"
+                urlPath="http://bit.ly/2PVqPHl"
+                title="Baramee Thai Bistro Brings Heat to Crossroads"
+                press="CityScene KC"
+                author="Kevin Collison"
+                date="Jan 29, 2019"
+                introduction="Crossroads diners beware, here’s an insider warning to the new Baramee Thai Bistro that just opened in the former Pizzabella space at 1810 Baltimore: don’t order your first dish hot.
+                “I recommend starting mild,” said co-owner Douglas Hoffman. “For 90 percent of the people, medium is good for them.”"
+                featurePicturePath="https://i.imgur.com/51mp8hP.jpg"
+              />
+              <DesktopNews
+                logoPath="https://i.imgur.com/7PSrxBb.jpg"
+                urlPath="http://bit.ly/2WQvJ9Q"
+                title="New Crossroads Thai restaurant serves up Tom Yum, Thai iced coffee and curry"
+                press="The Kansas City Star"
+                author="Joyce Smith"
+                date="Jan 24, 2019"
+                introduction="Douglas and Nutnisa Hoffman often head to the City Market to pick up the freshest produce for their Lee’s Summit restaurant, Mali Thai Bistro.
+                So for their second location, they picked a spot close to their vegetable vendors — the former Pizzabella building just a few blocks south of the market in the Crossroads."
+                featurePicturePath="https://i.imgur.com/u7gJRsi.png"
+              />
+            </div>
+          </div>
+        </div>
+      </React.Fragment>
+    )
+  }
+}
+
+export default DesktopHome
