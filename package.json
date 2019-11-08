@@ -1,8 +1,8 @@
 {
-  "name": "react-baramee-thai-bistro",
+  "name": "barameethaibistro",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://keenwilson.github.io/react-baramee-thai-bistro",
+  "homepage": "https://barameethaibistro.github.io",
   "dependencies": {
     "antd": "^3.19.1",
     "customize-cra": "^0.2.12",
@@ -21,7 +21,7 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "predeploy": "react-app-rewired build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
