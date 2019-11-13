@@ -21,7 +21,7 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "predeploy": "react-app-rewired build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
